@@ -4,6 +4,12 @@ module.exports = {
     index,
     show,
     new: newSkill,
+    create,
+}
+
+function create(req, res) {
+    Skill.create(req.body);
+    res.redirect('/skills')
 }
 
 function newSkill(req, res) {
