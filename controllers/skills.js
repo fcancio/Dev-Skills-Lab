@@ -3,6 +3,11 @@ var Skill = require('../models/skill');
 module.exports = {
     index,
     show,
+    new: newSkill,
+}
+
+function newSkill(req, res) {
+    res.render('skills/new')
 }
 
 function show(req, res) {
